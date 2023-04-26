@@ -24,6 +24,15 @@
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
+      <runner id="RUNNER_25" name="storing artifacts in local" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[mkdir build-output-after-extration
+cd build-output-after-extration
+tar -xf output-build.zip]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="ApiStore_HttpsGithubComSaichandanaLApiStoreGitRefsHeadsMain" />
