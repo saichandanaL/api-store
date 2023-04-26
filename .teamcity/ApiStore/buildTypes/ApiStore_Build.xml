@@ -26,7 +26,7 @@
       </runner>
       <runner id="RUNNER_25" name="storing artifacts in local" type="simpleRunner">
         <parameters>
-          <param name="script.content" value="system/artifacts/ApiStore/Build/*" />
+          <param name="script.content" value="/data/teamcity_server/datadir/system/artifacts/ApiStore/Build/*" />
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
