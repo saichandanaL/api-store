@@ -16,7 +16,7 @@
       </runner>
       <runner id="RUNNER_24" name="build" type="simpleRunner">
         <parameters>
-          <param name="script.content" value="donet build -o ./output-build" />
+          <param name="script.content" value="dotnet build -o ./output-build" />
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
