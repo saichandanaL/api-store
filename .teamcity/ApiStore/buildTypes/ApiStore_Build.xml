@@ -4,7 +4,7 @@
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="* =&gt; C:\Users\Adarsh.Koushik\Desktop\SaichandanaL\artifact" />
+      <option name="artifactRules" value="* =&gt; artifact.zip" />
     </options>
     <parameters />
     <build-runners>
