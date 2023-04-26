@@ -26,9 +26,7 @@
       </runner>
       <runner id="RUNNER_25" name="storing artifacts in local" type="simpleRunner">
         <parameters>
-          <param name="script.content"><![CDATA[mkdir build-output-after-extration
-cd build-output-after-extration
-tar -xf /data/teamcity_server/datadir/system/artifacts/ApiStore/Build/205/output-build.zip]]></param>
+          <param name="script.content" value="teamcity.agent.artifacts.download http://localhost:8111 &quot;id=205&quot; &quot;*&quot; ." />
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
