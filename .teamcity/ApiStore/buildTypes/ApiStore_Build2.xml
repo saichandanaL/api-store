@@ -110,7 +110,7 @@
       </dependency>
       <dependency id="ARTIFACT_DEPENDENCY_4" sourceBuildTypeId="ApiStore_Build2" cleanDestination="false">
         <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
-        <artifact sourcePath="*=&gt;%env.ProgramFiles%" />
+        <artifact sourcePath="*=&gt;%env.ProgramFiles%/mydep.zip" />
       </dependency>
       <dependency id="ARTIFACT_DEPENDENCY_5" sourceBuildTypeId="ApiStore_Build2" cleanDestination="false">
         <revisionRule name="lastFinished" revision="latest.lastFinished" />
