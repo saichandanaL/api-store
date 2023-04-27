@@ -107,7 +107,7 @@
         <artifact sourcePath="*=&gt;%env.ProgramFiles%" />
       </dependency>
       <dependency id="ARTIFACT_DEPENDENCY_6" sourceBuildTypeId="ApiStore_Build" cleanDestination="false">
-        <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
+        <revisionRule name="lastPinned" revision="latest.lastPinned" />
         <artifact sourcePath="*=&gt;%env.ProgramFiles%" />
       </dependency>
     </artifact-dependencies>
