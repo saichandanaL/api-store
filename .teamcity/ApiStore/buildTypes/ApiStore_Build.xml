@@ -48,7 +48,7 @@
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_3" sourceBuildTypeId="ApiStore_Build" cleanDestination="false">
         <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
-        <artifact sourcePath="*=&gt;output.zip" />
+        <artifact sourcePath="*=&gt;../output.zip" />
       </dependency>
     </artifact-dependencies>
     <cleanup />
