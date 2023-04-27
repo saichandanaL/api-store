@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="431d0721-f1eb-4928-aa2b-7a46708afcb2" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>Build2</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="* =&gt; ./artifact_now_build1.zip&#xA;+:\output-build =&gt; ./output-build_now_build1.zip" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="ARTIFACT_DEPENDENCY_3" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_4" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_5" />
+      <setting-ref ref="RUNNER_26" />
+      <setting-ref ref="RUNNER_27" />
+      <setting-ref ref="RUNNER_28" />
+      <setting-ref ref="RUNNER_29" />
+      <setting-ref ref="RUNNER_30" />
+      <setting-ref ref="RUNNER_31" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_23" name="NuGet Installer" type="jb.nuget.installer">
+        <parameters>
+          <param name="nuget.path" value="%teamcity.tool.NuGet.CommandLine.DEFAULT%" />
+          <param name="nuget.updatePackages.mode" value="sln" />
+          <param name="nuget.use.restore" value="restore" />
+          <param name="sln.path" value="api-store.sln" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_24" name="build" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="dotnet build -o ./output-build" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_26" name="storing artifacts in local" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="/artifacts =&gt; retrieved.zip" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_27" name="listing all files in currenct directory" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="dir %working_dir%" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_28" name="echo &quot;Hello, World!&quot; &gt; %teamcity.data.path%\file.txt" type="simpleRunner">
+        <parameters>
+          <param name="plugin.docker.imageId" value="%system.teamcity.build.workingDir%" />
+          <param name="script.content" value="%system.teamcity.build.tempDir%" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_29" name="file runner" type="ftp-deploy-runner">
+        <parameters>
+          <param name="jetbrains.buildServer.deployer.ftp.authMethod" value="ANONYMOUS" />
+          <param name="jetbrains.buildServer.deployer.ftp.dataChannelProtection" value="D" />
+          <param name="jetbrains.buildServer.deployer.ftp.ftpMode" value="PASSIVE" />
+          <param name="jetbrains.buildServer.deployer.ftp.securityMode" value="0" />
+          <param name="jetbrains.buildServer.deployer.ftp.transferMethod" value="AUTO" />
+          <param name="jetbrains.buildServer.deployer.sourcePath" value="*" />
+          <param name="jetbrains.buildServer.deployer.targetUrl" value="localhost:8100/" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_30" name="using parameters" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="%teamcity.build.checkoutDir%=&gt;%env.ProgramFiles%" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_31" name="finding teamcity server directory" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="%teamcity.build.workingDir%=&gt;%env.ProgramFiles%/teamcity.zip" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="ApiStore_HttpsGithubComSaichandanaLApiStoreGitRefsHeadsMain" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers>
+      <build-trigger id="TRIGGER_8" type="vcsTrigger">
+        <parameters>
+          <param name="branchFilter" value="+:*" />
+          <param name="enableQueueOptimization" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <build-extensions>
+      <extension id="perfmon" type="perfmon">
+        <parameters>
+          <param name="teamcity.perfmon.feature.enabled" value="true" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_3" sourceBuildTypeId="ApiStore_Build2" cleanDestination="false">
+        <revisionRule name="lastFinished" revision="latest.lastFinished" />
+        <artifact sourcePath="*=&gt;output.zip" />
+      </dependency>
+      <dependency id="ARTIFACT_DEPENDENCY_4" sourceBuildTypeId="ApiStore_Build2" cleanDestination="false">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
+        <artifact sourcePath="*=&gt;%env.ProgramFiles%" />
+      </dependency>
+      <dependency id="ARTIFACT_DEPENDENCY_5" sourceBuildTypeId="ApiStore_Build2" cleanDestination="false">
+        <revisionRule name="lastFinished" revision="latest.lastFinished" />
+        <artifact sourcePath="*=&gt;%env.ProgramFiles%" />
+      </dependency>
+    </artifact-dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+
