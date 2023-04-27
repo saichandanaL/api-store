@@ -59,7 +59,7 @@
           <param name="jetbrains.buildServer.deployer.ftp.securityMode" value="0" />
           <param name="jetbrains.buildServer.deployer.ftp.transferMethod" value="AUTO" />
           <param name="jetbrains.buildServer.deployer.sourcePath" value="*" />
-          <param name="jetbrains.buildServer.deployer.targetUrl" value="localhost" />
+          <param name="jetbrains.buildServer.deployer.targetUrl" value="localhost:8100/" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
