@@ -102,6 +102,10 @@
         <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
         <artifact sourcePath="*=&gt;%env.ProgramFiles%" />
       </dependency>
+      <dependency id="ARTIFACT_DEPENDENCY_5" sourceBuildTypeId="ApiStore_Build" cleanDestination="false">
+        <revisionRule name="lastFinished" revision="latest.lastFinished" />
+        <artifact sourcePath="*=&gt;%env.ProgramFiles%" />
+      </dependency>
     </artifact-dependencies>
     <cleanup />
   </settings>
