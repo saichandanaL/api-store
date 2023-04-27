@@ -10,7 +10,6 @@
       <setting-ref ref="RUNNER_26" />
       <setting-ref ref="RUNNER_27" />
       <setting-ref ref="RUNNER_28" />
-      <setting-ref ref="RUNNER_29" />
     </disabled-settings>
     <parameters />
     <build-runners>
@@ -50,18 +49,6 @@
           <param name="script.content" value="%system.teamcity.build.tempDir%" />
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_29" name="file runner" type="ftp-deploy-runner">
-        <parameters>
-          <param name="jetbrains.buildServer.deployer.ftp.authMethod" value="ANONYMOUS" />
-          <param name="jetbrains.buildServer.deployer.ftp.dataChannelProtection" value="D" />
-          <param name="jetbrains.buildServer.deployer.ftp.ftpMode" value="PASSIVE" />
-          <param name="jetbrains.buildServer.deployer.ftp.securityMode" value="0" />
-          <param name="jetbrains.buildServer.deployer.ftp.transferMethod" value="AUTO" />
-          <param name="jetbrains.buildServer.deployer.sourcePath" value="*" />
-          <param name="jetbrains.buildServer.deployer.targetUrl" value="localhost:8100/" />
-          <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
     </build-runners>
