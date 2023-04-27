@@ -107,6 +107,10 @@
       </extension>
     </build-extensions>
     <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_7" sourceBuildTypeId="ApiStore_Build" cleanDestination="false">
+        <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
+        <artifact sourcePath="*=&gt;%env.ProgramFiles%/artifacts_in_build.zip" />
+      </dependency>
       <dependency id="ARTIFACT_DEPENDENCY_3" sourceBuildTypeId="ApiStore_Build2" cleanDestination="false">
         <revisionRule name="lastFinished" revision="latest.lastFinished" />
         <artifact sourcePath="*=&gt;output.zip" />
