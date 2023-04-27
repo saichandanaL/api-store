@@ -8,6 +8,7 @@
     </options>
     <disabled-settings>
       <setting-ref ref="ARTIFACT_DEPENDENCY_3" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_4" />
       <setting-ref ref="RUNNER_26" />
       <setting-ref ref="RUNNER_27" />
       <setting-ref ref="RUNNER_28" />
