@@ -92,7 +92,7 @@
       </dependency>
       <dependency id="ARTIFACT_DEPENDENCY_4" sourceBuildTypeId="ApiStore_Build" cleanDestination="false">
         <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
-        <artifact sourcePath="*=&gt;%system.agent.work.dir%" />
+        <artifact sourcePath="*=&gt;%env.ProgramFiles%" />
       </dependency>
     </artifact-dependencies>
     <cleanup />
