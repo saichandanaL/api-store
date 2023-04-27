@@ -51,6 +51,18 @@
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
+      <runner id="RUNNER_29" name="file runner" type="ftp-deploy-runner">
+        <parameters>
+          <param name="jetbrains.buildServer.deployer.ftp.authMethod" value="ANONYMOUS" />
+          <param name="jetbrains.buildServer.deployer.ftp.dataChannelProtection" value="D" />
+          <param name="jetbrains.buildServer.deployer.ftp.ftpMode" value="PASSIVE" />
+          <param name="jetbrains.buildServer.deployer.ftp.securityMode" value="0" />
+          <param name="jetbrains.buildServer.deployer.ftp.transferMethod" value="AUTO" />
+          <param name="jetbrains.buildServer.deployer.sourcePath" value="*" />
+          <param name="jetbrains.buildServer.deployer.targetUrl" value="localhost" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="ApiStore_HttpsGithubComSaichandanaLApiStoreGitRefsHeadsMain" />
