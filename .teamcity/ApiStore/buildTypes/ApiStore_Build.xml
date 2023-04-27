@@ -36,7 +36,7 @@
       </runner>
       <runner id="RUNNER_27" name="listing all files in currenct directory" type="simpleRunner">
         <parameters>
-          <param name="script.content" value="ls %working_dir%" />
+          <param name="script.content" value="dir %working_dir%" />
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
