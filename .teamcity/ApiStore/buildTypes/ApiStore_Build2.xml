@@ -12,7 +12,6 @@
       <setting-ref ref="RUNNER_28" />
       <setting-ref ref="RUNNER_29" />
       <setting-ref ref="RUNNER_30" />
-      <setting-ref ref="RUNNER_31" />
     </disabled-settings>
     <parameters />
     <build-runners>
@@ -69,13 +68,6 @@
       <runner id="RUNNER_30" name="using parameters" type="simpleRunner">
         <parameters>
           <param name="script.content" value="%teamcity.build.checkoutDir%=&gt;%env.ProgramFiles%" />
-          <param name="teamcity.step.mode" value="default" />
-          <param name="use.custom.script" value="true" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_31" name="finding teamcity server directory" type="simpleRunner">
-        <parameters>
-          <param name="script.content" value="%teamcity.build.workingDir%=&gt;%env.ProgramFiles%/teamcity.zip" />
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
