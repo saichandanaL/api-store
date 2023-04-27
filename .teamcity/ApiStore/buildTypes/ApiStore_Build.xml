@@ -44,7 +44,8 @@
       </runner>
       <runner id="RUNNER_28" name="echo &quot;Hello, World!&quot; &gt; %teamcity.data.path%\file.txt" type="simpleRunner">
         <parameters>
-          <param name="script.content" value="echo &quot;Hello, World!&quot; &gt; %teamcity.data.path%\file.txt" />
+          <param name="plugin.docker.imageId" value="%system.teamcity.build.workingDir%" />
+          <param name="script.content" value="%system.teamcity.build.tempDir%" />
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
