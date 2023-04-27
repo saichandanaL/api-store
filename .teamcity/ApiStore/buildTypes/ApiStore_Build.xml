@@ -66,8 +66,7 @@
       </runner>
       <runner id="RUNNER_30" name="using parameters" type="simpleRunner">
         <parameters>
-          <param name="script.content" value="*=&gt;%env.ProgramFiles%" />
-          <param name="teamcity.build.workingDir" value="%teamcity.build.workingDir%" />
+          <param name="script.content" value="%teamcity.build.checkoutDir%=&gt;%env.ProgramFiles%" />
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
