@@ -4,7 +4,7 @@
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="* =&gt; ./artifact_now1.zip&#xA;+:\output-build =&gt; ./output-build_now1.zip" />
+      <option name="artifactRules" value="* =&gt; ./artifact_now1.zip&#xA;+:\output-build =&gt; ./output-build_now1.zip&#xA;* =&gt; %env.ProgramFiles%" />
     </options>
     <disabled-settings>
       <setting-ref ref="RUNNER_26" />
