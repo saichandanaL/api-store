@@ -4,7 +4,7 @@
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="* =&gt; ./artifact_now1.zip&#xA;+:\output-build =&gt; ./output-build_now1.zip&#xA;* =&gt; %env.ProgramFiles%" />
+      <option name="artifactRules" value="* =&gt; ./artifact_now1.zip&#xA;+:\output-build =&gt; ./output-build_now1.zip&#xA;* =&gt; %teamcity.agent.home.dir%" />
     </options>
     <disabled-settings>
       <setting-ref ref="ARTIFACT_DEPENDENCY_3" />
