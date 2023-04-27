@@ -42,6 +42,13 @@
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
+      <runner id="RUNNER_28" name="echo &quot;Hello, World!&quot; &gt; %teamcity.data.path%\file.txt" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo &quot;Hello, World!&quot; &gt; %teamcity.data.path%\file.txt" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="ApiStore_HttpsGithubComSaichandanaLApiStoreGitRefsHeadsMain" />
