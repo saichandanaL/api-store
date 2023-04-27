@@ -3,9 +3,6 @@
   <name>Build2</name>
   <description />
   <settings>
-    <options>
-      <option name="artifactRules" value="* =&gt; ./artifact_now1.zip&#xA;+:\output-build =&gt; ./output-build_now1.zip&#xA;* =&gt; %teamcity.agent.home.dir%/main_file.zip" />
-    </options>
     <disabled-settings>
       <setting-ref ref="ARTIFACT_DEPENDENCY_3" />
       <setting-ref ref="ARTIFACT_DEPENDENCY_4" />
