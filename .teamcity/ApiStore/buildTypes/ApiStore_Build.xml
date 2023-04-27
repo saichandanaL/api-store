@@ -54,7 +54,7 @@
     </build-extensions>
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_3" sourceBuildTypeId="ApiStore_Build" cleanDestination="false">
-        <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
+        <revisionRule name="lastFinished" revision="latest.lastFinished" />
         <artifact sourcePath="*=&gt;../output.zip" />
       </dependency>
     </artifact-dependencies>
