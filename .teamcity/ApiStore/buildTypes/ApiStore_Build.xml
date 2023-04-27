@@ -26,7 +26,7 @@
       </runner>
       <runner id="RUNNER_26" name="storing artifacts in local" type="simpleRunner">
         <parameters>
-          <param name="script.content" value="*/artifacts =&gt; retrieved.zip" />
+          <param name="script.content" value="/artifacts =&gt; retrieved.zip" />
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
