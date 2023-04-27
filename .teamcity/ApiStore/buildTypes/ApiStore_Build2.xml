@@ -7,7 +7,6 @@
       <option name="artifactRules" value="* =&gt; ./artifact_now_build1.zip&#xA;+:\output-build =&gt; ./output-build_now_build1.zip" />
     </options>
     <disabled-settings>
-      <setting-ref ref="ARTIFACT_DEPENDENCY_3" />
       <setting-ref ref="ARTIFACT_DEPENDENCY_5" />
       <setting-ref ref="RUNNER_26" />
       <setting-ref ref="RUNNER_27" />
