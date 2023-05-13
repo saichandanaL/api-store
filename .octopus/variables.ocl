@@ -1,0 +1,9 @@
+variable "ConnectionStrings:Default" {
+    value "dev" {}
+
+    value "prod" {}
+}
+
+variable "AppSettings:AppVersion" {
+    value "0" {}
+}
