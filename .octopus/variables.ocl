@@ -1,9 +1,13 @@
-variable "ConnectionStrings:Default" {
-    value "dev" {}
-
-    value "prod" {}
-}
-
 variable "AppSettings:AppVersion" {
     value "0" {}
+}
+
+variable "ConnectionStrings:Default" {
+    value "dev" {
+        machine = ["instance-2"]
+    }
+
+    value "prod" {
+        machine = ["web-server-1"]
+    }
 }
