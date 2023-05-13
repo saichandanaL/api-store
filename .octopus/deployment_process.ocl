@@ -51,14 +51,14 @@ step "deploy-to-iis" {
             Octopus.Action.Package.AutomaticallyUpdateAppSettingsAndConnectionStrings = "True"
             Octopus.Action.Package.DownloadOnTentacle = "False"
             Octopus.Action.Package.FeedId = "octopus-server-built-in"
-            Octopus.Action.Package.PackageId = "main_order-api_v1_1"
+            Octopus.Action.Package.PackageId = "main_ASPNETCoreWebAPI_v1_1"
         }
         worker_pool_variable = ""
 
         packages {
             acquisition_location = "Server"
             feed = "octopus-server-built-in"
-            package_id = "main_order-api_v1_1"
+            package_id = "main_ASPNETCoreWebAPI_v1_1"
             properties = {
                 SelectionMode = "immediate"
             }
